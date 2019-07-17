@@ -1,13 +1,13 @@
-package com.example.springboot_activiti;
+package com.demo.springboot_activiti_demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringbootActivitiApplication {
+public class SpringbootActivitiDemoApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringbootActivitiApplication.class, args);
+        SpringApplication.run(SpringbootActivitiDemoApplication.class, args);
     }
 
 }
