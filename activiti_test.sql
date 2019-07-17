@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50540
 File Encoding         : 65001
 
-Date: 2019-07-17 09:34:56
+Date: 2019-07-17 10:17:57
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -36,6 +36,10 @@ CREATE TABLE `act_evt_log` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- ----------------------------
+-- Records of act_evt_log
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for act_ge_bytearray
 -- ----------------------------
 DROP TABLE IF EXISTS `act_ge_bytearray`;
@@ -52,6 +56,12 @@ CREATE TABLE `act_ge_bytearray` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- ----------------------------
+-- Records of act_ge_bytearray
+-- ----------------------------
+INSERT INTO `act_ge_bytearray` VALUES ('2', '1', 'source', null, 0x7B226964223A2263616E766173222C227265736F757263654964223A2263616E766173222C227374656E63696C736574223A7B226E616D657370616365223A22687474703A2F2F62336D6E2E6F72672F7374656E63696C7365742F62706D6E322E3023227D7D, null);
+INSERT INTO `act_ge_bytearray` VALUES ('2502', '1', 'source', null, 0x7B226964223A2263616E766173222C227265736F757263654964223A2263616E766173222C227374656E63696C736574223A7B226E616D657370616365223A22687474703A2F2F62336D6E2E6F72672F7374656E63696C7365742F62706D6E322E3023227D7D, null);
+
+-- ----------------------------
 -- Table structure for act_ge_property
 -- ----------------------------
 DROP TABLE IF EXISTS `act_ge_property`;
@@ -61,6 +71,13 @@ CREATE TABLE `act_ge_property` (
   `REV_` int(11) DEFAULT NULL,
   PRIMARY KEY (`NAME_`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of act_ge_property
+-- ----------------------------
+INSERT INTO `act_ge_property` VALUES ('next.dbid', '5001', '3');
+INSERT INTO `act_ge_property` VALUES ('schema.history', 'create(5.22.0.0)', '1');
+INSERT INTO `act_ge_property` VALUES ('schema.version', '5.22.0.0', '1');
 
 -- ----------------------------
 -- Table structure for act_hi_actinst
@@ -89,6 +106,10 @@ CREATE TABLE `act_hi_actinst` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- ----------------------------
+-- Records of act_hi_actinst
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for act_hi_attachment
 -- ----------------------------
 DROP TABLE IF EXISTS `act_hi_attachment`;
@@ -108,6 +129,10 @@ CREATE TABLE `act_hi_attachment` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- ----------------------------
+-- Records of act_hi_attachment
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for act_hi_comment
 -- ----------------------------
 DROP TABLE IF EXISTS `act_hi_comment`;
@@ -123,6 +148,10 @@ CREATE TABLE `act_hi_comment` (
   `FULL_MSG_` longblob,
   PRIMARY KEY (`ID_`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of act_hi_comment
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for act_hi_detail
@@ -153,6 +182,10 @@ CREATE TABLE `act_hi_detail` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- ----------------------------
+-- Records of act_hi_detail
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for act_hi_identitylink
 -- ----------------------------
 DROP TABLE IF EXISTS `act_hi_identitylink`;
@@ -168,6 +201,10 @@ CREATE TABLE `act_hi_identitylink` (
   KEY `ACT_IDX_HI_IDENT_LNK_TASK` (`TASK_ID_`),
   KEY `ACT_IDX_HI_IDENT_LNK_PROCINST` (`PROC_INST_ID_`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of act_hi_identitylink
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for act_hi_procinst
@@ -193,6 +230,10 @@ CREATE TABLE `act_hi_procinst` (
   KEY `ACT_IDX_HI_PRO_INST_END` (`END_TIME_`),
   KEY `ACT_IDX_HI_PRO_I_BUSKEY` (`BUSINESS_KEY_`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of act_hi_procinst
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for act_hi_taskinst
@@ -224,6 +265,10 @@ CREATE TABLE `act_hi_taskinst` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- ----------------------------
+-- Records of act_hi_taskinst
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for act_hi_varinst
 -- ----------------------------
 DROP TABLE IF EXISTS `act_hi_varinst`;
@@ -249,6 +294,10 @@ CREATE TABLE `act_hi_varinst` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- ----------------------------
+-- Records of act_hi_varinst
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for act_id_group
 -- ----------------------------
 DROP TABLE IF EXISTS `act_id_group`;
@@ -259,6 +308,10 @@ CREATE TABLE `act_id_group` (
   `TYPE_` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   PRIMARY KEY (`ID_`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of act_id_group
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for act_id_info
@@ -277,6 +330,10 @@ CREATE TABLE `act_id_info` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- ----------------------------
+-- Records of act_id_info
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for act_id_membership
 -- ----------------------------
 DROP TABLE IF EXISTS `act_id_membership`;
@@ -288,6 +345,10 @@ CREATE TABLE `act_id_membership` (
   CONSTRAINT `ACT_FK_MEMB_USER` FOREIGN KEY (`USER_ID_`) REFERENCES `act_id_user` (`ID_`),
   CONSTRAINT `ACT_FK_MEMB_GROUP` FOREIGN KEY (`GROUP_ID_`) REFERENCES `act_id_group` (`ID_`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of act_id_membership
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for act_id_user
@@ -303,6 +364,10 @@ CREATE TABLE `act_id_user` (
   `PICTURE_ID_` varchar(64) COLLATE utf8_bin DEFAULT NULL,
   PRIMARY KEY (`ID_`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of act_id_user
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for act_procdef_info
@@ -322,6 +387,10 @@ CREATE TABLE `act_procdef_info` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- ----------------------------
+-- Records of act_procdef_info
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for act_re_deployment
 -- ----------------------------
 DROP TABLE IF EXISTS `act_re_deployment`;
@@ -333,6 +402,10 @@ CREATE TABLE `act_re_deployment` (
   `DEPLOY_TIME_` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`ID_`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of act_re_deployment
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for act_re_model
@@ -362,6 +435,12 @@ CREATE TABLE `act_re_model` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- ----------------------------
+-- Records of act_re_model
+-- ----------------------------
+INSERT INTO `act_re_model` VALUES ('1', '2', 'new-process', 'process', null, '2019-07-17 10:16:51', '2019-07-17 10:16:51', '1', '{\"name\":\"new-process\",\"description\":\"\",\"revision\":1}', null, '2', null, '');
+INSERT INTO `act_re_model` VALUES ('2501', '2', 'hello1111', '12313123', null, '2019-07-17 02:17:39', '2019-07-17 02:17:39', '1', '{\"name\":\"hello1111\",\"revision\":1,\"description\":\"hello1111\"}', null, '2502', null, '');
+
+-- ----------------------------
 -- Table structure for act_re_procdef
 -- ----------------------------
 DROP TABLE IF EXISTS `act_re_procdef`;
@@ -385,6 +464,10 @@ CREATE TABLE `act_re_procdef` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- ----------------------------
+-- Records of act_re_procdef
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for act_ru_event_subscr
 -- ----------------------------
 DROP TABLE IF EXISTS `act_ru_event_subscr`;
@@ -405,6 +488,10 @@ CREATE TABLE `act_ru_event_subscr` (
   KEY `ACT_FK_EVENT_EXEC` (`EXECUTION_ID_`),
   CONSTRAINT `ACT_FK_EVENT_EXEC` FOREIGN KEY (`EXECUTION_ID_`) REFERENCES `act_ru_execution` (`ID_`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of act_ru_event_subscr
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for act_ru_execution
@@ -441,6 +528,10 @@ CREATE TABLE `act_ru_execution` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- ----------------------------
+-- Records of act_ru_execution
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for act_ru_identitylink
 -- ----------------------------
 DROP TABLE IF EXISTS `act_ru_identitylink`;
@@ -463,6 +554,10 @@ CREATE TABLE `act_ru_identitylink` (
   CONSTRAINT `ACT_FK_ATHRZ_PROCEDEF` FOREIGN KEY (`PROC_DEF_ID_`) REFERENCES `act_re_procdef` (`ID_`),
   CONSTRAINT `ACT_FK_TSKASS_TASK` FOREIGN KEY (`TASK_ID_`) REFERENCES `act_ru_task` (`ID_`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of act_ru_identitylink
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for act_ru_job
@@ -490,6 +585,10 @@ CREATE TABLE `act_ru_job` (
   KEY `ACT_FK_JOB_EXCEPTION` (`EXCEPTION_STACK_ID_`),
   CONSTRAINT `ACT_FK_JOB_EXCEPTION` FOREIGN KEY (`EXCEPTION_STACK_ID_`) REFERENCES `act_ge_bytearray` (`ID_`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of act_ru_job
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for act_ru_task
@@ -526,6 +625,10 @@ CREATE TABLE `act_ru_task` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- ----------------------------
+-- Records of act_ru_task
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for act_ru_variable
 -- ----------------------------
 DROP TABLE IF EXISTS `act_ru_variable`;
@@ -551,3 +654,7 @@ CREATE TABLE `act_ru_variable` (
   CONSTRAINT `ACT_FK_VAR_EXE` FOREIGN KEY (`EXECUTION_ID_`) REFERENCES `act_ru_execution` (`ID_`),
   CONSTRAINT `ACT_FK_VAR_PROCINST` FOREIGN KEY (`PROC_INST_ID_`) REFERENCES `act_ru_execution` (`ID_`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of act_ru_variable
+-- ----------------------------
